@@ -1,0 +1,187 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Gravitas+One&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+/* Body Background */
+body {
+    background-image: url("../images/background.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+
+/* Universal Selector */
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    text-decoration: none;
+    font-family: "Space Mono", monospace;
+}
+
+/* Global Variables */
+:root {
+    --brand-accent-color: #99b285;
+    --accent-color: #709561;
+    --accent-color-dark: #99b285;
+    --color-white: #ffffff;
+}
+
+
+/* Header Configuration */
+header {
+    display: flex;
+    background-color: var(--color-white);
+    padding: 1rem 5%;
+    justify-content: space-between;
+    position: fixed;
+    width: -webkit-fill-available;
+    top: 0;
+    left: 0;
+
+}
+
+
+/* Header links's configuration */
+.header .headerNavLinks {
+    display: flex; 
+    align-items: center;
+    gap: 2rem; 
+}
+
+/* Header's icon configuration */
+.header .headerIcon {
+    display: flex;
+    align-items: center;
+}
+
+.header .headerIcon .headerIconText {
+    font-family:"Gravitas One", serif;
+    font-weight: 500;
+    color: var(--brand-accent-color);
+    font-size: 2rem;
+    margin-left: 1rem;
+}
+
+.header .headerIcon .headerIconImg {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+.header .headerNavLinks a{
+    font-family: "Space Mono", monospace;
+    font-size: 1.2rem;
+    transition: .5s;
+    color: rgb(102, 102, 102);
+}
+
+.header .headerNavLinks .active,
+.header .headerNavLinks .link:hover {
+    color:var(--accent-color-dark);
+    border-bottom: var(--accent-color-dark) solid 1px;
+}
+
+
+
+
+
+
+
+.homeSection {
+    height: 100%;
+    align-items: right;
+    padding: 30vh 10% 2rem;
+    text-align: left;
+}
+
+.homeSection .content {
+    padding: 2rem;
+    background-color: white;
+    width: 500px;
+}
+
+.homeSection .content .title {
+    font-family: "Gravitas One", serif;
+    font-weight: 500;
+    font-size: 5rem;
+    color: var(--accent-color);
+    animation: homeTitleAppear 1s ease-out forwards;
+}
+
+@keyframes homeTitleAppear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.homeSection .content p {
+    color: rgb(0, 0, 0);
+    margin-bottom: 2rem;
+    animation: paragraphAppear .5s linear both;
+    animation-delay: .7s;
+}
+
+@keyframes paragraphAppear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.homeSection .content .logInButton {
+    background-color: var(--accent-color);
+    padding: .7rem 1.3rem;
+    border-radius: 2rem;
+    color: white;
+    align-items: center;
+    transition: .3s;
+    border: var(--accent-color) solid 2px;
+    animation: logInButtonAppear .5s ease-out both;
+    animation-delay: .8s;
+}
+
+@keyframes logInButtonAppear {
+    0% {
+        transform: translateY(100);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.homeSection .content .logInButton:hover {
+    background-color: transparent;
+    color: var(--accent-color);
+}
+
+#input {
+    margin-bottom: 1rem;
+    border: rgb(190, 190, 190) solid 2px;
+    padding: 1rem;
+    font-size: 1rem;
+    width: -webkit-fill-available;
+    border-radius: 50px;
+    transition: .2s;
+}
+
+#input:hover {
+    border: var(--accent-color) solid 2px;
+}
+
+#signup {
+    color:#99b285;
+    transition: .3s;
+}
+
+#signup:hover {
+    color:#709561;
+    text-decoration: underline;
+}

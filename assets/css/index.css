@@ -1,0 +1,203 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Gravitas+One&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body {
+    background-image: url("../images/background.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    text-decoration: none;
+    font-family: "Space Mono", monospace;
+}
+
+:root {
+    --brand-accent-color: #99b285;
+    --accent-color: #709561;
+    --accent-color-dark: #99b285;
+    --color-white: #ffffff;
+}
+
+header {
+    display: flex;
+    background-color: var(--color-white);
+    padding: 1rem 5%;
+    justify-content: space-between;
+    position: fixed;
+    width: -webkit-fill-available;
+    top: 0;
+    left: 0;
+}
+
+.header .headerNavLinks {
+    display: flex; 
+    align-items: center;
+    gap: 2rem; 
+}
+
+.header .headerIcon {
+    display: flex;
+    align-items: center;
+}
+
+.header .headerIcon .headerIconText {
+    font-family:"Gravitas One", serif;
+    font-weight: 500;
+    color: var(--brand-accent-color);
+    font-size: 2rem;
+    margin-left: 1rem;
+    animation: headerIconTextAppear .5s linear both;
+    animation-delay: .3s;
+}
+
+@keyframes headerIconTextAppear {
+    0% {
+        transform: translateX(100);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.header .headerIcon .headerIconImg {
+    height: 2.5rem;
+    width: 2.5rem;
+    animation: headerIconImgAppear .5s linear both;
+}
+
+@keyframes headerIconImgAppear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.header .headerNavLinks a{
+    font-family: "Space Mono", monospace;
+    font-size: 1.2rem;
+    transition: .5s;
+    color: rgb(102, 102, 102);
+}
+
+.header .headerNavLinks .active,
+.header .headerNavLinks .link:hover {
+    color:var(--accent-color-dark);
+    border-bottom: var(--accent-color-dark) solid 1px;
+}
+
+.header .headerNavLinks .buttonLogin {
+    background-color: var(--accent-color);
+    padding: .3rem 1.3rem;
+    border-radius: 1.5rem;
+    color: white;
+    align-items: center;
+    transition: .3s;
+    border: var(--accent-color) solid 2px;
+}
+
+.header .headerNavLinks .buttonLogin:hover {
+    background-color: transparent;
+    color: var(--accent-color);
+}
+
+
+
+
+
+
+
+
+
+
+.homeSection {
+    height: 100%;
+    align-items: center;
+    padding: 30vh 5% 2rem;
+    text-align: center;
+}
+
+.homeSection .content .title {
+    font-family: "Gravitas One", serif;
+    font-weight: 500;
+    font-size: 5rem;
+    color: white;
+    animation: homeTitleAppear 1s ease-out forwards;
+}
+
+@keyframes homeTitleAppear {
+    0% {
+        font-size: 2rem;
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.homeSection .content .quoteline {
+    margin-top: 1rem;
+    animation: quoteBarAppear .5s linear both;
+    animation-delay: .5s;
+}
+
+@keyframes quoteBarAppear{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.homeSection .content p {
+    color: white;
+    margin-bottom: 2rem;
+    animation: paragraphAppear .5s linear both;
+    animation-delay: .7s;
+}
+
+@keyframes paragraphAppear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.homeSection .content .exploreButton {
+    background-color: white;
+    padding: .3rem 1.3rem;
+    border-radius: 1.5rem;
+    color: var(--accent-color);
+    align-items: center;
+    transition: .3s;
+    border: white solid 2px;
+
+    animation: exploreButtonAppear .5s ease-out both;
+    animation-delay: .8s;
+}
+
+@keyframes exploreButtonAppear {
+    0% {
+        transform: translateY(100);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.homeSection .content .exploreButton:hover {
+    background-color: transparent;
+    color: white;
+}
